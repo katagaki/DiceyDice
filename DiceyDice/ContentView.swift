@@ -14,41 +14,44 @@ struct ContentView: View {
     let scene = SCNScene()
 
     var body: some View {
-        VStack(alignment: .center, spacing: 8.0) {
-            SceneView(scene: {
-                                 scene.background.contents = UIColor.systemBackground
-                                 return scene
-                             }(),
-                      pointOfView: camera(),
-                      options: [.allowsCameraControl],
-                      preferredFramesPerSecond: 60)
-            Divider()
-            HStack(alignment: .center, spacing: 8.0) {
-                Button {
-                    resetScene()
-                } label: {
-                    HStack {
-                        Image(systemName: "arrow.clockwise")
-                        Text("Reset Scene")
+        SceneView(scene: {
+                             scene.background.contents = UIColor.systemBackground
+                             return scene
+                         }(),
+                  pointOfView: camera(),
+                  options: [.allowsCameraControl],
+                  preferredFramesPerSecond: 60)
+        .ignoresSafeArea()
+        .overlay {
+            ZStack(alignment: .bottom) {
+                Color.clear
+                HStack(alignment: .center, spacing: 8.0) {
+                    Button {
+                        resetScene()
+                    } label: {
+                        HStack {
+                            Image(systemName: "arrow.clockwise")
+                            Text("Reset Scene")
+                        }
+                        .padding()
                     }
-                    .padding()
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 99))
-                .buttonStyle(.bordered)
-                Button {
-                    addDice()
-                } label: {
-                    HStack {
-                        Image(systemName: "dice.fill")
-                        Text("Add Dice")
-                            .bold()
+                    .clipShape(RoundedRectangle(cornerRadius: 99))
+                    .buttonStyle(.bordered)
+                    Button {
+                        addDice()
+                    } label: {
+                        HStack {
+                            Image(systemName: "dice.fill")
+                            Text("Add Dice")
+                                .bold()
+                        }
+                        .padding()
                     }
-                    .padding()
+                    .clipShape(RoundedRectangle(cornerRadius: 99))
+                    .buttonStyle(.borderedProminent)
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 99))
-                .buttonStyle(.borderedProminent)
+                .padding()
             }
-            .padding()
         }
         .onAppear {
             resetScene()
@@ -85,7 +88,9 @@ struct ContentView: View {
         for wall in walls() {
             scene.rootNode.addChildNode(wall)
         }
-        scene.rootNode.addChildNode(light())
+        for light in lights() {
+            scene.rootNode.addChildNode(light)
+        }
     }
 
     func dice(position: SCNVector3, rotation: SCNVector3) -> SCNNode {
@@ -94,6 +99,7 @@ struct ContentView: View {
         let physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
         physicsBody.mass = 0.045
         physicsBody.centerOfMassOffset = SCNVector3(1.70, 1.80, -0.96)
+        physicsBody.allowsResting = true
         diceNode.physicsBody = physicsBody
         diceNode.eulerAngles = rotation
         diceNode.position = position
@@ -101,24 +107,24 @@ struct ContentView: View {
     }
     
     func walls() -> [SCNNode] {
-        let leftWall = SCNBox(width: 1.0, height: 10.0, length: 40.0, chamferRadius: 0.0)
+        let leftWall = SCNBox(width: 0.5, height: 10.0, length: 40.0, chamferRadius: 0.0)
         let leftWallNode = SCNNode(geometry: leftWall)
-        let rightWall = SCNBox(width: 1.0, height: 10.0, length: 40.0, chamferRadius: 0.0)
+        let rightWall = SCNBox(width: 0.5, height: 10.0, length: 40.0, chamferRadius: 0.0)
         let rightWallNode = SCNNode(geometry: rightWall)
-        let topWall = SCNBox(width: 42.0, height: 10.0, length: 1.0, chamferRadius: 0.0)
+        let topWall = SCNBox(width: 40.5, height: 10.0, length: 0.5, chamferRadius: 0.0)
         let topWallNode = SCNNode(geometry: topWall)
-        let bottomWall = SCNBox(width: 42.0, height: 10.0, length: 1.0, chamferRadius: 0.0)
+        let bottomWall = SCNBox(width: 40.5, height: 10.0, length: 0.5, chamferRadius: 0.0)
         let bottomWallNode = SCNNode(geometry: bottomWall)
-        leftWallNode.position = SCNVector3(x: -20.5, y: 5, z: 0)
+        leftWallNode.position = SCNVector3(x: -20.0, y: 5, z: 0)
         leftWallNode.geometry?.firstMaterial?.diffuse.contents = UIColor.lightGray
         leftWallNode.physicsBody = SCNPhysicsBody(type: .static, shape: nil)
-        rightWallNode.position = SCNVector3(x: 20.5, y: 5, z: 0)
+        rightWallNode.position = SCNVector3(x: 20.0, y: 5, z: 0)
         rightWallNode.geometry?.firstMaterial?.diffuse.contents = UIColor.lightGray
         rightWallNode.physicsBody = SCNPhysicsBody(type: .static, shape: nil)
-        topWallNode.position = SCNVector3(x: 0, y: 5, z: 20.5)
+        topWallNode.position = SCNVector3(x: 0, y: 5, z: 20.0)
         topWallNode.geometry?.firstMaterial?.diffuse.contents = UIColor.lightGray
         topWallNode.physicsBody = SCNPhysicsBody(type: .static, shape: nil)
-        bottomWallNode.position = SCNVector3(x: 0, y: 5, z: -20.5)
+        bottomWallNode.position = SCNVector3(x: 0, y: 5, z: -20.0)
         bottomWallNode.geometry?.firstMaterial?.diffuse.contents = UIColor.lightGray
         bottomWallNode.physicsBody = SCNPhysicsBody(type: .static, shape: nil)
         return [leftWallNode, rightWallNode, topWallNode, bottomWallNode]
@@ -136,17 +142,19 @@ struct ContentView: View {
         return floorNode
     }
 
-    func light() -> SCNNode {
-        let lightNode = SCNNode()
-        lightNode.light = SCNLight()
-        lightNode.light!.type = .ambient
-        lightNode.position = SCNVector3(x: 0, y: 10, z: 0)
-        return lightNode
+    func lights() -> [SCNNode] {
+        let ambientLightNode = SCNNode()
+        let directionalLightNode = SCNNode()
+        ambientLightNode.light = SCNLight()
+        ambientLightNode.light!.type = .ambient
+        ambientLightNode.light!.color = UIColor(white: 0.70, alpha: 1.0)
+        ambientLightNode.position = SCNVector3(x: 0, y: 10, z: 0)
+        return [ambientLightNode, directionalLightNode]
     }
 
     func camera() -> SCNNode {
         let cameraNode = SCNNode()
-        cameraNode.position = SCNVector3(x: 0, y: 40, z: 0)
+        cameraNode.position = SCNVector3(x: 0, y: 60, z: 0)
         cameraNode.eulerAngles = SCNVector3(-3.14 / 2, 0, 0)
         cameraNode.camera = SCNCamera()
         return cameraNode
