@@ -11,6 +11,7 @@
 		E4124BD92AA1AA1800EE69E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4124BD82AA1AA1800EE69E9 /* ContentView.swift */; };
 		E4124BDB2AA1AA1A00EE69E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */; };
 		E4124BDF2AA1AA1A00EE69E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BDE2AA1AA1A00EE69E9 /* Preview Assets.xcassets */; };
+		E4124BE82AA1B50500EE69E9 /* Scene Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4124BDC2AA1AA1A00EE69E9 /* DiceyDice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiceyDice.entitlements; sourceTree = "<group>"; };
 		E4124BDE2AA1AA1A00EE69E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = "Scene Assets.scnassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */,
 				E4124BD82AA1AA1800EE69E9 /* ContentView.swift */,
 				E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */,
+				E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */,
 				E4124BDC2AA1AA1A00EE69E9 /* DiceyDice.entitlements */,
 				E4124BDD2AA1AA1A00EE69E9 /* Preview Content */,
 			);
@@ -127,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4124BE82AA1B50500EE69E9 /* Scene Assets.scnassets in Resources */,
 				E4124BDF2AA1AA1A00EE69E9 /* Preview Assets.xcassets in Resources */,
 				E4124BDB2AA1AA1A00EE69E9 /* Assets.xcassets in Resources */,
 			);
@@ -292,7 +296,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsubuzaki.DiceyDice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -330,7 +335,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsubuzaki.DiceyDice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
