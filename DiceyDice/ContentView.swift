@@ -22,32 +22,46 @@ struct ContentView: View {
         .overlay {
             ZStack(alignment: .bottom) {
                 Color.clear
-                HStack(alignment: .center, spacing: 8.0) {
-                    Button {
-                        resetScene()
-                    } label: {
-                        HStack {
-                            Image(systemName: "xmark.bin.fill")
-                            Text("Remove All")
+                ScrollView(.horizontal) {
+                    HStack(alignment: .center, spacing: 8.0) {
+                        Button {
+                            resetScene()
+                        } label: {
+                            HStack {
+                                Image(systemName: "xmark.bin.fill")
+                                Text("Clear")
+                            }
+                            .padding()
                         }
-                        .padding()
-                    }
-                    .clipShape(RoundedRectangle(cornerRadius: 99))
-                    .buttonStyle(.bordered)
-                    Button {
-                        addDice()
-                    } label: {
-                        HStack {
-                            Image(systemName: "dice.fill")
-                            Text("Add Dice")
-                                .bold()
+                        .clipShape(RoundedRectangle(cornerRadius: 99))
+                        .buttonStyle(.bordered)
+                        Button {
+                            addDice(number: 1)
+                        } label: {
+                            HStack {
+                                Image(systemName: "dice.fill")
+                                Text("Roll 1")
+                                    .bold()
+                            }
+                            .padding()
                         }
-                        .padding()
+                        .clipShape(RoundedRectangle(cornerRadius: 99))
+                        .buttonStyle(.borderedProminent)
+                        Button {
+                            addDice(number: 5)
+                        } label: {
+                            HStack {
+                                Image(systemName: "dice.fill")
+                                Text("Roll 5")
+                                    .bold()
+                            }
+                            .padding()
+                        }
+                        .clipShape(RoundedRectangle(cornerRadius: 99))
+                        .buttonStyle(.borderedProminent)
                     }
-                    .clipShape(RoundedRectangle(cornerRadius: 99))
-                    .buttonStyle(.borderedProminent)
+                    .padding()
                 }
-                .padding()
             }
         }
         .onAppear {
@@ -55,17 +69,20 @@ struct ContentView: View {
         }
     }
 
-    func addDice() {
-        scene.rootNode.childNode(withName: "dice", 
-                                 recursively: false)!.addChildNode(
-                                    dice(position: SCNVector3(0, 5, 0),
-                                         rotation: SCNVector3(randRadians(),
-                                                              randRadians(),
-                                                              randRadians())))
+    func addDice(number: Int) {
+        for _ in 0..<number {
+            scene.rootNode.childNode(withName: "dice",
+                                     recursively: false)!.addChildNode(
+                                        dice(position: SCNVector3(0, 5, 8),
+                                             rotation: SCNVector3(randRadians(),
+                                                                  randRadians(),
+                                                                  randRadians())))
+        }
     }
 
     func resetScene() {
         scene.background.contents = UIColor.systemBackground
+        scene.rootNode.childNode(withName: "worldFloor", recursively: true)!.geometry?.firstMaterial?.diffuse.contents = UIColor.systemBackground
         scene.rootNode.childNode(withName: "dice", recursively: false)!.enumerateChildNodes { node, _ in
             node.removeFromParentNode()
         }
@@ -74,6 +91,10 @@ struct ContentView: View {
     func dice(position: SCNVector3, rotation: SCNVector3) -> SCNNode {
         let diceScene = SCNScene(named: "Scene Assets.scnassets/Dice.scn")
         let diceNode = diceScene!.rootNode.childNodes[0]
+        diceNode.physicsBody!.applyForce(SCNVector3(0, 0, -0.15), 
+                                         asImpulse: true)
+        diceNode.physicsBody!.applyTorque(SCNVector4(0.05, 0.05, 0.05, randRadians()),
+                                          asImpulse: false)
         diceNode.eulerAngles = rotation
         diceNode.position = position
         return diceNode
