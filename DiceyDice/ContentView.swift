@@ -16,8 +16,8 @@ struct ContentView: View {
     var body: some View {
         SceneView(scene: scene,
                   pointOfView: scene.rootNode.childNode(withName: "camera", recursively: false)!,
-                  options: [.allowsCameraControl],
-                  preferredFramesPerSecond: 60)
+                  preferredFramesPerSecond: 60,
+                  antialiasingMode: .multisampling4X)
         .ignoresSafeArea()
         .overlay {
             ZStack(alignment: .bottom) {
