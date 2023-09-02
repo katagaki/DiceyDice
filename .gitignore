@@ -1,3 +1,5 @@
 xcuserdata/
-DiceyDice/Scene Assets.scnassets/
-DiceyDice/Assets.xcassets/3D Model Assets/
+
+# Copyrighted assets (you can use your own dice model)
+DiceyDice/Scene Assets.scnassets/Dice.scn
+DiceyDice/Scene Assets.scnassets/Red_Transparent_Dice_Sharp_Diffuse.png

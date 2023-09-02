@@ -22,6 +22,7 @@
 		E4124BDC2AA1AA1A00EE69E9 /* DiceyDice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiceyDice.entitlements; sourceTree = "<group>"; };
 		E4124BDE2AA1AA1A00EE69E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = "Scene Assets.scnassets"; sourceTree = "<group>"; };
+		E49DF66E2AA2DB0000A6D14E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		E4124BD52AA1AA1800EE69E9 /* DiceyDice */ = {
 			isa = PBXGroup;
 			children = (
+				E49DF66E2AA2DB0000A6D14E /* Info.plist */,
 				E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */,
 				E4124BD82AA1AA1800EE69E9 /* ContentView.swift */,
 				E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */,
@@ -278,6 +280,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DiceyDice/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -317,6 +320,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DiceyDice/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
