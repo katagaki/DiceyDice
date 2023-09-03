@@ -9,6 +9,7 @@ However, you can find or create your own model using the specifications as follo
 - Width: 2.454
 - Height: 2.463
 - Depth: 2.457
+- Scale: 0.2, 0.2, 0.2
 
 **Physics Body**
 - Mass: 0.05
