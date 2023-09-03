@@ -100,10 +100,10 @@ struct ContentView: View {
     }
 
     func addDice(number: Int) {
-        for _ in 0..<number {
+        for index in 0..<number {
             scene.rootNode.childNode(withName: "dice",
                                      recursively: false)!.addChildNode(
-                                        dice(position: SCNVector3(0, 5, 8),
+                                        dice(position: SCNVector3(0, 8 + (Double(index) * 1), 10),
                                              rotation: SCNVector3(randRadians(),
                                                                   randRadians(),
                                                                   randRadians())))
