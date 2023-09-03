@@ -11,7 +11,8 @@ import CoreMotion
 
 struct ContentView: View {
 
-    let scene = SCNScene(named: "Scene Assets.scnassets/DiceWorld.scn")!
+    let scene = SCNScene(named: "Scene Assets.scnassets/Sandbox.scn")!
+    @State var diceCount = 0
 
     var body: some View {
         SceneView(scene: scene,
@@ -20,7 +21,17 @@ struct ContentView: View {
                   antialiasingMode: .multisampling4X)
         .ignoresSafeArea()
         .overlay {
-            ZStack(alignment: .bottom) {
+            ZStack(alignment: .topLeading) {
+                Text("DiceyDice")
+                    .font(.largeTitle)
+                    .bold()
+                    .shadow(radius: 6.0, x: 0.0, y: 3.0)
+                    .padding()
+                Color.clear
+            }
+        }
+        .overlay {
+            ZStack(alignment: .bottomLeading) {
                 Color.clear
                 ScrollView(.horizontal) {
                     HStack(alignment: .center, spacing: 8.0) {
@@ -35,63 +46,25 @@ struct ContentView: View {
                         }
                         .clipShape(RoundedRectangle(cornerRadius: 99))
                         .buttonStyle(.bordered)
-                        Group {
+                        ForEach(1...5, id: \.self) { int in
                             Button {
-                                addDice(number: 1)
+                                addDice(number: int)
                             } label: {
                                 HStack {
                                     Image(systemName: "dice.fill")
-                                    Text("Roll 1")
+                                    Text("Roll \(int)")
                                         .bold()
                                 }
                                 .padding()
                             }
-                            Button {
-                                addDice(number: 2)
-                            } label: {
-                                HStack {
-                                    Image(systemName: "dice.fill")
-                                    Text("Roll 2")
-                                        .bold()
-                                }
-                                .padding()
-                            }
-                            Button {
-                                addDice(number: 3)
-                            } label: {
-                                HStack {
-                                    Image(systemName: "dice.fill")
-                                    Text("Roll 3")
-                                        .bold()
-                                }
-                                .padding()
-                            }
-                            Button {
-                                addDice(number: 4)
-                            } label: {
-                                HStack {
-                                    Image(systemName: "dice.fill")
-                                    Text("Roll 4")
-                                        .bold()
-                                }
-                                .padding()
-                            }
-                            Button {
-                                addDice(number: 5)
-                            } label: {
-                                HStack {
-                                    Image(systemName: "dice.fill")
-                                    Text("Roll 5")
-                                        .bold()
-                                }
-                                .padding()
-                            }
+                            .disabled(diceCount + int > 100)
                         }
                         .clipShape(RoundedRectangle(cornerRadius: 99))
                         .buttonStyle(.borderedProminent)
                     }
                     .padding()
                 }
+                .scrollIndicators(.hidden)
             }
         }
         .onAppear {
@@ -101,27 +74,29 @@ struct ContentView: View {
 
     func addDice(number: Int) {
         for index in 0..<number {
-            scene.rootNode.childNode(withName: "dice",
+            scene.rootNode.childNode(withName: "objects",
                                      recursively: false)!.addChildNode(
-                                        dice(position: SCNVector3(0, 8 + (Double(index) * 1), 10),
+                                        dice(position: SCNVector3(0, 8 + (Double(index) * 1.5), 10),
                                              rotation: SCNVector3(randRadians(),
                                                                   randRadians(),
                                                                   randRadians())))
         }
+        diceCount += number
     }
 
     func resetScene() {
         scene.background.contents = UIColor.systemBackground
         scene.rootNode.childNode(withName: "worldFloor", recursively: true)!.geometry?.firstMaterial?.diffuse.contents = UIColor.systemBackground
-        scene.rootNode.childNode(withName: "dice", recursively: false)!.enumerateChildNodes { node, _ in
+        scene.rootNode.childNode(withName: "objects", recursively: false)!.enumerateChildNodes { node, _ in
             node.removeFromParentNode()
         }
+        diceCount = 0
     }
 
     func dice(position: SCNVector3, rotation: SCNVector3) -> SCNNode {
         let diceScene = SCNScene(named: "Scene Assets.scnassets/Dice.scn")
         let diceNode = diceScene!.rootNode.childNodes[0]
-        diceNode.physicsBody!.applyForce(SCNVector3(0, 0, -0.15), 
+        diceNode.physicsBody!.applyForce(SCNVector3(0, 0, -1.5),
                                          asImpulse: true)
         diceNode.physicsBody!.applyTorque(SCNVector4(0.05, 0.05, 0.05, randRadians()),
                                           asImpulse: false)
