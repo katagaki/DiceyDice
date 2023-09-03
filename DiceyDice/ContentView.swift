@@ -35,27 +35,57 @@ struct ContentView: View {
                         }
                         .clipShape(RoundedRectangle(cornerRadius: 99))
                         .buttonStyle(.bordered)
-                        Button {
-                            addDice(number: 1)
-                        } label: {
-                            HStack {
-                                Image(systemName: "dice.fill")
-                                Text("Roll 1")
-                                    .bold()
+                        Group {
+                            Button {
+                                addDice(number: 1)
+                            } label: {
+                                HStack {
+                                    Image(systemName: "dice.fill")
+                                    Text("Roll 1")
+                                        .bold()
+                                }
+                                .padding()
                             }
-                            .padding()
-                        }
-                        .clipShape(RoundedRectangle(cornerRadius: 99))
-                        .buttonStyle(.borderedProminent)
-                        Button {
-                            addDice(number: 5)
-                        } label: {
-                            HStack {
-                                Image(systemName: "dice.fill")
-                                Text("Roll 5")
-                                    .bold()
+                            Button {
+                                addDice(number: 2)
+                            } label: {
+                                HStack {
+                                    Image(systemName: "dice.fill")
+                                    Text("Roll 2")
+                                        .bold()
+                                }
+                                .padding()
                             }
-                            .padding()
+                            Button {
+                                addDice(number: 3)
+                            } label: {
+                                HStack {
+                                    Image(systemName: "dice.fill")
+                                    Text("Roll 3")
+                                        .bold()
+                                }
+                                .padding()
+                            }
+                            Button {
+                                addDice(number: 4)
+                            } label: {
+                                HStack {
+                                    Image(systemName: "dice.fill")
+                                    Text("Roll 4")
+                                        .bold()
+                                }
+                                .padding()
+                            }
+                            Button {
+                                addDice(number: 5)
+                            } label: {
+                                HStack {
+                                    Image(systemName: "dice.fill")
+                                    Text("Roll 5")
+                                        .bold()
+                                }
+                                .padding()
+                            }
                         }
                         .clipShape(RoundedRectangle(cornerRadius: 99))
                         .buttonStyle(.borderedProminent)
