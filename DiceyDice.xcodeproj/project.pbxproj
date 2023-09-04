@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E407C67E2AA4FAD5004D8128 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E407C6802AA4FAD5004D8128 /* Localizable.strings */; };
+		E407C6842AA4FB54004D8128 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E407C6862AA4FB54004D8128 /* InfoPlist.strings */; };
 		E4124BD72AA1AA1800EE69E9 /* DiceyDiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */; };
 		E4124BD92AA1AA1800EE69E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4124BD82AA1AA1800EE69E9 /* ContentView.swift */; };
 		E4124BDB2AA1AA1A00EE69E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */; };
@@ -15,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E407C67F2AA4FAD5004D8128 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E407C6812AA4FAD7004D8128 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E407C6852AA4FB54004D8128 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E407C6872AA4FB57004D8128 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E4124BD32AA1AA1800EE69E9 /* DiceyDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceyDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceyDiceApp.swift; sourceTree = "<group>"; };
 		E4124BD82AA1AA1800EE69E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +65,8 @@
 				E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */,
 				E4124BD82AA1AA1800EE69E9 /* ContentView.swift */,
 				E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */,
+				E407C6862AA4FB54004D8128 /* InfoPlist.strings */,
+				E407C6802AA4FAD5004D8128 /* Localizable.strings */,
 				E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */,
 				E4124BDC2AA1AA1A00EE69E9 /* DiceyDice.entitlements */,
 				E4124BDD2AA1AA1A00EE69E9 /* Preview Content */,
@@ -116,6 +124,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = E4124BCA2AA1AA1800EE69E9;
 			productRefGroup = E4124BD42AA1AA1800EE69E9 /* Products */;
@@ -133,8 +142,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4124BE82AA1B50500EE69E9 /* Scene Assets.scnassets in Resources */,
+				E407C67E2AA4FAD5004D8128 /* Localizable.strings in Resources */,
 				E4124BDF2AA1AA1A00EE69E9 /* Preview Assets.xcassets in Resources */,
 				E4124BDB2AA1AA1A00EE69E9 /* Assets.xcassets in Resources */,
+				E407C6842AA4FB54004D8128 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +162,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E407C6802AA4FAD5004D8128 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E407C67F2AA4FAD5004D8128 /* en */,
+				E407C6812AA4FAD7004D8128 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		E407C6862AA4FB54004D8128 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E407C6852AA4FB54004D8128 /* en */,
+				E407C6872AA4FB57004D8128 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E4124BE02AA1AA1A00EE69E9 /* Debug */ = {
@@ -274,7 +306,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DiceyDice/DiceyDice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"DiceyDice/Preview Content\"";
 				DEVELOPMENT_TEAM = YYM4Z6MU8F;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -289,8 +321,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -303,7 +335,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,7 +346,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DiceyDice/DiceyDice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"DiceyDice/Preview Content\"";
 				DEVELOPMENT_TEAM = YYM4Z6MU8F;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -329,8 +361,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -343,7 +375,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

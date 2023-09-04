@@ -52,7 +52,7 @@ struct ContentView: View {
                             } label: {
                                 HStack {
                                     Image(systemName: "dice.fill")
-                                    Text("Roll \(int)")
+                                    Text(NSLocalizedString("Roll \(int)", comment: ""))
                                         .bold()
                                 }
                                 .padding()
@@ -109,8 +109,4 @@ struct ContentView: View {
         return Float.random(in: -3.14...3.14)
     }
 
-}
-
-#Preview {
-    ContentView()
 }

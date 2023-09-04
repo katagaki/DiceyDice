@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  DiceyDice
+
+  Created by シン・ジャスティン on 4/9/23.
+  
+*/
+
+"DiceyDice" = "サイコーロ";
+"Clear" = "クリア";
+"Roll 1" = "1個投げる";
+"Roll 2" = "2個投げる";
+"Roll 3" = "3個投げる";
+"Roll 4" = "4個投げる";
+"Roll 5" = "5個投げる";
