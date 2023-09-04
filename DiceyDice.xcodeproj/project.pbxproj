@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E407C67E2AA4FAD5004D8128 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E407C6802AA4FAD5004D8128 /* Localizable.strings */; };
 		E407C6842AA4FB54004D8128 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E407C6862AA4FB54004D8128 /* InfoPlist.strings */; };
+		E407C68A2AA5971E004D8128 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E407C6892AA5971E004D8128 /* MoreView.swift */; };
+		E407C68C2AA59748004D8128 /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E407C68B2AA59748004D8128 /* ListRow.swift */; };
+		E407C68E2AA5975D004D8128 /* ListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E407C68D2AA5975D004D8128 /* ListSectionHeader.swift */; };
 		E4124BD72AA1AA1800EE69E9 /* DiceyDiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */; };
 		E4124BD92AA1AA1800EE69E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4124BD82AA1AA1800EE69E9 /* ContentView.swift */; };
 		E4124BDB2AA1AA1A00EE69E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 		E407C6812AA4FAD7004D8128 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E407C6852AA4FB54004D8128 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E407C6872AA4FB57004D8128 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E407C6892AA5971E004D8128 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		E407C68B2AA59748004D8128 /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
+		E407C68D2AA5975D004D8128 /* ListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSectionHeader.swift; sourceTree = "<group>"; };
 		E4124BD32AA1AA1800EE69E9 /* DiceyDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceyDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceyDiceApp.swift; sourceTree = "<group>"; };
 		E4124BD82AA1AA1800EE69E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 				E49DF66E2AA2DB0000A6D14E /* Info.plist */,
 				E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */,
 				E4124BD82AA1AA1800EE69E9 /* ContentView.swift */,
+				E407C6892AA5971E004D8128 /* MoreView.swift */,
+				E407C68B2AA59748004D8128 /* ListRow.swift */,
+				E407C68D2AA5975D004D8128 /* ListSectionHeader.swift */,
 				E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */,
 				E407C6862AA4FB54004D8128 /* InfoPlist.strings */,
 				E407C6802AA4FAD5004D8128 /* Localizable.strings */,
@@ -156,7 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E407C68C2AA59748004D8128 /* ListRow.swift in Sources */,
 				E4124BD92AA1AA1800EE69E9 /* ContentView.swift in Sources */,
+				E407C68E2AA5975D004D8128 /* ListSectionHeader.swift in Sources */,
+				E407C68A2AA5971E004D8128 /* MoreView.swift in Sources */,
 				E4124BD72AA1AA1800EE69E9 /* DiceyDiceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +318,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DiceyDice/DiceyDice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"DiceyDice/Preview Content\"";
 				DEVELOPMENT_TEAM = YYM4Z6MU8F;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -346,7 +358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DiceyDice/DiceyDice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"DiceyDice/Preview Content\"";
 				DEVELOPMENT_TEAM = YYM4Z6MU8F;
 				ENABLE_HARDENED_RUNTIME = YES;

@@ -13,6 +13,7 @@ struct ContentView: View {
 
     let scene = SCNScene(named: "Scene Assets.scnassets/Sandbox.scn")!
     @State var diceCount = 0
+    @State var isMoreViewPresenting = false
 
     var body: some View {
         SceneView(scene: scene,
@@ -25,7 +26,7 @@ struct ContentView: View {
                 Text("DiceyDice")
                     .font(.largeTitle)
                     .bold()
-                    .shadow(radius: 6.0, x: 0.0, y: 3.0)
+                    .shadow(color: .secondary.opacity(0.5), radius: 6.0, x: 0.0, y: 3.0)
                     .padding()
                 Color.clear
             }
@@ -61,6 +62,17 @@ struct ContentView: View {
                         }
                         .clipShape(RoundedRectangle(cornerRadius: 99))
                         .buttonStyle(.borderedProminent)
+                        Button {
+                            isMoreViewPresenting = true
+                        } label: {
+                            HStack {
+                                Image(systemName: "ellipsis")
+                                Text("More")
+                            }
+                            .padding()
+                        }
+                        .clipShape(RoundedRectangle(cornerRadius: 99))
+                        .buttonStyle(.bordered)
                     }
                     .padding()
                 }
@@ -69,6 +81,11 @@ struct ContentView: View {
         }
         .onAppear {
             resetScene()
+        }
+        .sheet(isPresented: $isMoreViewPresenting) {
+            MoreView()
+                .presentationDetents([.medium])
+                .presentationDragIndicator(.visible)
         }
     }
 
