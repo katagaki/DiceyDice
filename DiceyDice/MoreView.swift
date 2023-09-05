@@ -53,7 +53,6 @@ struct MoreView: View {
             }
             .listStyle(.insetGrouped)
             .navigationTitle("View.More")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
