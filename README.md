@@ -2,6 +2,8 @@
 
 A simple sample app that uses SceneKit to draw and throw dice.
 
+**Download: [App Store](https://apps.apple.com/app/id6464077724)**
+
 ## Dice Model Specifications
 
 Because the dice model is a model purchased from a store, I am unable to include it in this repository.
