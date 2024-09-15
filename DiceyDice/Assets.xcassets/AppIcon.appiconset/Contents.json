@@ -1,7 +1,31 @@
 {
   "images" : [
     {
-      "filename" : "‎DiceyDice.‎001.png",
+      "filename" : "DiceyDice.001.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "DiceyDice.002.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "tinted"
+        }
+      ],
+      "filename" : "DiceyDice.003.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"

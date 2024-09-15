@@ -3,30 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E407C67E2AA4FAD5004D8128 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E407C6802AA4FAD5004D8128 /* Localizable.strings */; };
-		E407C6842AA4FB54004D8128 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E407C6862AA4FB54004D8128 /* InfoPlist.strings */; };
 		E407C68A2AA5971E004D8128 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E407C6892AA5971E004D8128 /* MoreView.swift */; };
-		E407C68C2AA59748004D8128 /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E407C68B2AA59748004D8128 /* ListRow.swift */; };
-		E407C68E2AA5975D004D8128 /* ListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E407C68D2AA5975D004D8128 /* ListSectionHeader.swift */; };
 		E4124BD72AA1AA1800EE69E9 /* DiceyDiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */; };
 		E4124BD92AA1AA1800EE69E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4124BD82AA1AA1800EE69E9 /* ContentView.swift */; };
 		E4124BDB2AA1AA1A00EE69E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */; };
 		E4124BDF2AA1AA1A00EE69E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BDE2AA1AA1A00EE69E9 /* Preview Assets.xcassets */; };
 		E4124BE82AA1B50500EE69E9 /* Scene Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */; };
+		E4855F272C97285800F0C02E /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E4855F262C97285800F0C02E /* InfoPlist.xcstrings */; };
+		E4855F292C97285800F0C02E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E4855F282C97285800F0C02E /* Localizable.xcstrings */; };
+		E4855F2C2C9728A300F0C02E /* Komponents in Frameworks */ = {isa = PBXBuildFile; productRef = E4855F2B2C9728A300F0C02E /* Komponents */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E407C67F2AA4FAD5004D8128 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E407C6812AA4FAD7004D8128 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E407C6852AA4FB54004D8128 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E407C6872AA4FB57004D8128 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E407C6892AA5971E004D8128 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
-		E407C68B2AA59748004D8128 /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
-		E407C68D2AA5975D004D8128 /* ListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSectionHeader.swift; sourceTree = "<group>"; };
 		E4124BD32AA1AA1800EE69E9 /* DiceyDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceyDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceyDiceApp.swift; sourceTree = "<group>"; };
 		E4124BD82AA1AA1800EE69E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +27,8 @@
 		E4124BDC2AA1AA1A00EE69E9 /* DiceyDice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiceyDice.entitlements; sourceTree = "<group>"; };
 		E4124BDE2AA1AA1A00EE69E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = "Scene Assets.scnassets"; sourceTree = "<group>"; };
+		E4855F262C97285800F0C02E /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		E4855F282C97285800F0C02E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		E49DF66E2AA2DB0000A6D14E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4855F2C2C9728A300F0C02E /* Komponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,11 +67,9 @@
 				E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */,
 				E4124BD82AA1AA1800EE69E9 /* ContentView.swift */,
 				E407C6892AA5971E004D8128 /* MoreView.swift */,
-				E407C68B2AA59748004D8128 /* ListRow.swift */,
-				E407C68D2AA5975D004D8128 /* ListSectionHeader.swift */,
 				E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */,
-				E407C6862AA4FB54004D8128 /* InfoPlist.strings */,
-				E407C6802AA4FAD5004D8128 /* Localizable.strings */,
+				E4855F262C97285800F0C02E /* InfoPlist.xcstrings */,
+				E4855F282C97285800F0C02E /* Localizable.xcstrings */,
 				E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */,
 				E4124BDC2AA1AA1A00EE69E9 /* DiceyDice.entitlements */,
 				E4124BDD2AA1AA1A00EE69E9 /* Preview Content */,
@@ -127,7 +121,7 @@
 				};
 			};
 			buildConfigurationList = E4124BCE2AA1AA1800EE69E9 /* Build configuration list for PBXProject "DiceyDice" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -136,6 +130,9 @@
 				ja,
 			);
 			mainGroup = E4124BCA2AA1AA1800EE69E9;
+			packageReferences = (
+				E4855F2A2C9728A300F0C02E /* XCRemoteSwiftPackageReference "Komponents" */,
+			);
 			productRefGroup = E4124BD42AA1AA1800EE69E9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -150,11 +147,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4855F272C97285800F0C02E /* InfoPlist.xcstrings in Resources */,
 				E4124BE82AA1B50500EE69E9 /* Scene Assets.scnassets in Resources */,
-				E407C67E2AA4FAD5004D8128 /* Localizable.strings in Resources */,
 				E4124BDF2AA1AA1A00EE69E9 /* Preview Assets.xcassets in Resources */,
 				E4124BDB2AA1AA1A00EE69E9 /* Assets.xcassets in Resources */,
-				E407C6842AA4FB54004D8128 /* InfoPlist.strings in Resources */,
+				E4855F292C97285800F0C02E /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,36 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E407C68C2AA59748004D8128 /* ListRow.swift in Sources */,
 				E4124BD92AA1AA1800EE69E9 /* ContentView.swift in Sources */,
-				E407C68E2AA5975D004D8128 /* ListSectionHeader.swift in Sources */,
 				E407C68A2AA5971E004D8128 /* MoreView.swift in Sources */,
 				E4124BD72AA1AA1800EE69E9 /* DiceyDiceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E407C6802AA4FAD5004D8128 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E407C67F2AA4FAD5004D8128 /* en */,
-				E407C6812AA4FAD7004D8128 /* ja */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		E407C6862AA4FB54004D8128 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E407C6852AA4FB54004D8128 /* en */,
-				E407C6872AA4FB57004D8128 /* ja */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E4124BE02AA1AA1A00EE69E9 /* Debug */ = {
@@ -254,6 +228,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -308,6 +283,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -318,7 +294,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DiceyDice/DiceyDice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DiceyDice/Preview Content\"";
 				DEVELOPMENT_TEAM = YYM4Z6MU8F;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -335,11 +311,11 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsubuzaki.DiceyDice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -358,7 +334,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DiceyDice/DiceyDice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DiceyDice/Preview Content\"";
 				DEVELOPMENT_TEAM = YYM4Z6MU8F;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -375,11 +351,11 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsubuzaki.DiceyDice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -413,6 +389,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E4855F2A2C9728A300F0C02E /* XCRemoteSwiftPackageReference "Komponents" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/katagaki/Komponents";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E4855F2B2C9728A300F0C02E /* Komponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4855F2A2C9728A300F0C02E /* XCRemoteSwiftPackageReference "Komponents" */;
+			productName = Komponents;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4124BCB2AA1AA1800EE69E9 /* Project object */;
 }
