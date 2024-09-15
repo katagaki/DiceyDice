@@ -11,7 +11,6 @@
 		E4124BD72AA1AA1800EE69E9 /* DiceyDiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */; };
 		E4124BD92AA1AA1800EE69E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4124BD82AA1AA1800EE69E9 /* ContentView.swift */; };
 		E4124BDB2AA1AA1A00EE69E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */; };
-		E4124BDF2AA1AA1A00EE69E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BDE2AA1AA1A00EE69E9 /* Preview Assets.xcassets */; };
 		E4124BE82AA1B50500EE69E9 /* Scene Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */; };
 		E4855F272C97285800F0C02E /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E4855F262C97285800F0C02E /* InfoPlist.xcstrings */; };
 		E4855F292C97285800F0C02E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E4855F282C97285800F0C02E /* Localizable.xcstrings */; };
@@ -25,7 +24,6 @@
 		E4124BD82AA1AA1800EE69E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4124BDC2AA1AA1A00EE69E9 /* DiceyDice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiceyDice.entitlements; sourceTree = "<group>"; };
-		E4124BDE2AA1AA1A00EE69E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = "Scene Assets.scnassets"; sourceTree = "<group>"; };
 		E4855F262C97285800F0C02E /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		E4855F282C97285800F0C02E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -72,17 +70,8 @@
 				E4855F282C97285800F0C02E /* Localizable.xcstrings */,
 				E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */,
 				E4124BDC2AA1AA1A00EE69E9 /* DiceyDice.entitlements */,
-				E4124BDD2AA1AA1A00EE69E9 /* Preview Content */,
 			);
 			path = DiceyDice;
-			sourceTree = "<group>";
-		};
-		E4124BDD2AA1AA1A00EE69E9 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E4124BDE2AA1AA1A00EE69E9 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +138,6 @@
 			files = (
 				E4855F272C97285800F0C02E /* InfoPlist.xcstrings in Resources */,
 				E4124BE82AA1B50500EE69E9 /* Scene Assets.scnassets in Resources */,
-				E4124BDF2AA1AA1A00EE69E9 /* Preview Assets.xcassets in Resources */,
 				E4124BDB2AA1AA1A00EE69E9 /* Assets.xcassets in Resources */,
 				E4855F292C97285800F0C02E /* Localizable.xcstrings in Resources */,
 			);
@@ -295,7 +283,6 @@
 				CODE_SIGN_ENTITLEMENTS = DiceyDice/DiceyDice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DiceyDice/Preview Content\"";
 				DEVELOPMENT_TEAM = YYM4Z6MU8F;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -335,7 +322,6 @@
 				CODE_SIGN_ENTITLEMENTS = DiceyDice/DiceyDice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DiceyDice/Preview Content\"";
 				DEVELOPMENT_TEAM = YYM4Z6MU8F;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
