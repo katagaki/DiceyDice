@@ -3,32 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E407C68A2AA5971E004D8128 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E407C6892AA5971E004D8128 /* MoreView.swift */; };
-		E4124BD72AA1AA1800EE69E9 /* DiceyDiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */; };
-		E4124BD92AA1AA1800EE69E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4124BD82AA1AA1800EE69E9 /* ContentView.swift */; };
-		E4124BDB2AA1AA1A00EE69E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */; };
-		E4124BE82AA1B50500EE69E9 /* Scene Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */; };
-		E4855F272C97285800F0C02E /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E4855F262C97285800F0C02E /* InfoPlist.xcstrings */; };
-		E4855F292C97285800F0C02E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E4855F282C97285800F0C02E /* Localizable.xcstrings */; };
 		E4855F2C2C9728A300F0C02E /* Komponents in Frameworks */ = {isa = PBXBuildFile; productRef = E4855F2B2C9728A300F0C02E /* Komponents */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E407C6892AA5971E004D8128 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		E4124BD32AA1AA1800EE69E9 /* DiceyDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceyDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceyDiceApp.swift; sourceTree = "<group>"; };
-		E4124BD82AA1AA1800EE69E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E4124BDC2AA1AA1A00EE69E9 /* DiceyDice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiceyDice.entitlements; sourceTree = "<group>"; };
-		E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = "Scene Assets.scnassets"; sourceTree = "<group>"; };
-		E4855F262C97285800F0C02E /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
-		E4855F282C97285800F0C02E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		E49DF66E2AA2DB0000A6D14E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E48200182F51FB5300E531FF /* Exceptions for "DiceyDice" folder in "DiceyDice" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E4124BD22AA1AA1800EE69E9 /* DiceyDice */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E482000E2F51FB5200E531FF /* DiceyDice */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E48200182F51FB5300E531FF /* Exceptions for "DiceyDice" folder in "DiceyDice" target */,
+			);
+			path = DiceyDice;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E4124BD02AA1AA1800EE69E9 /* Frameworks */ = {
@@ -45,7 +50,7 @@
 		E4124BCA2AA1AA1800EE69E9 = {
 			isa = PBXGroup;
 			children = (
-				E4124BD52AA1AA1800EE69E9 /* DiceyDice */,
+				E482000E2F51FB5200E531FF /* DiceyDice */,
 				E4124BD42AA1AA1800EE69E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,22 +61,6 @@
 				E4124BD32AA1AA1800EE69E9 /* DiceyDice.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		E4124BD52AA1AA1800EE69E9 /* DiceyDice */ = {
-			isa = PBXGroup;
-			children = (
-				E49DF66E2AA2DB0000A6D14E /* Info.plist */,
-				E4124BD62AA1AA1800EE69E9 /* DiceyDiceApp.swift */,
-				E4124BD82AA1AA1800EE69E9 /* ContentView.swift */,
-				E407C6892AA5971E004D8128 /* MoreView.swift */,
-				E4124BDA2AA1AA1A00EE69E9 /* Assets.xcassets */,
-				E4855F262C97285800F0C02E /* InfoPlist.xcstrings */,
-				E4855F282C97285800F0C02E /* Localizable.xcstrings */,
-				E4124BE72AA1B50500EE69E9 /* Scene Assets.scnassets */,
-				E4124BDC2AA1AA1A00EE69E9 /* DiceyDice.entitlements */,
-			);
-			path = DiceyDice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +78,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				E482000E2F51FB5200E531FF /* DiceyDice */,
+			);
 			name = DiceyDice;
 			productName = DiceyDice;
 			productReference = E4124BD32AA1AA1800EE69E9 /* DiceyDice.app */;
@@ -102,7 +94,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					E4124BD22AA1AA1800EE69E9 = {
 						CreatedOnToolsVersion = 15.0;
@@ -110,7 +102,6 @@
 				};
 			};
 			buildConfigurationList = E4124BCE2AA1AA1800EE69E9 /* Build configuration list for PBXProject "DiceyDice" */;
-			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -122,6 +113,7 @@
 			packageReferences = (
 				E4855F2A2C9728A300F0C02E /* XCRemoteSwiftPackageReference "Komponents" */,
 			);
+			preferredProjectObjectVersion = 77;
 			productRefGroup = E4124BD42AA1AA1800EE69E9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -136,10 +128,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4855F272C97285800F0C02E /* InfoPlist.xcstrings in Resources */,
-				E4124BE82AA1B50500EE69E9 /* Scene Assets.scnassets in Resources */,
-				E4124BDB2AA1AA1A00EE69E9 /* Assets.xcassets in Resources */,
-				E4855F292C97285800F0C02E /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4124BD92AA1AA1800EE69E9 /* ContentView.swift in Sources */,
-				E407C68A2AA5971E004D8128 /* MoreView.swift in Sources */,
-				E4124BD72AA1AA1800EE69E9 /* DiceyDiceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +149,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -193,7 +179,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YYM4Z6MU8F;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -215,6 +203,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -226,6 +215,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -255,7 +245,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = YYM4Z6MU8F;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -270,6 +262,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -283,9 +276,11 @@
 				CODE_SIGN_ENTITLEMENTS = DiceyDice/DiceyDice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YYM4Z6MU8F;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DiceyDice/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -302,7 +297,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsubuzaki.DiceyDice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -322,9 +317,11 @@
 				CODE_SIGN_ENTITLEMENTS = DiceyDice/DiceyDice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YYM4Z6MU8F;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DiceyDice/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -341,7 +338,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsubuzaki.DiceyDice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
