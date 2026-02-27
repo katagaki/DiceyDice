@@ -13,7 +13,6 @@ struct MoreView: View {
     var body: some View {
         NavigationStack {
             MoreList(repoName: "katagaki/DiceyDice") { }
-            .navigationTitle("View.More")
             .navigationBarTitleDisplayMode(.inline)
         }
     }
